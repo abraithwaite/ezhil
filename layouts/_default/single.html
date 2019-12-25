@@ -7,7 +7,7 @@
 
 		<div class="post-header">
 			<h1 class="title">{{ .Title }}</h1>
-		{{- if (eq .Params.hidePostDate true) -}}
+		{{- if not (eq .Params.hidePostDate true) -}}
 			<div class="meta">Posted at &mdash; {{ dateFormat "Jan 2, 2006" .Date }}{{ if .Draft }} <span class="draft-label">DRAFT</span> {{ end }}</div>
 		{{- end -}}
 		</div>
